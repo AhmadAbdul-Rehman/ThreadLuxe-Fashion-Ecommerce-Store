@@ -1,0 +1,40 @@
+@use "./utils/" as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active {
+    color: black;
+    hr {
+        display: block;
+    }
+}
+
+@media (max-width: 639px) {
+    a.active {
+        background: #000;
+        color: white;
+    }
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: black;
+    width: 0;
+    z-index: 9999;
+    transition: width 0.4s ease-out;
+
+    &.active {
+        width: 100%;
+    }
+    &.hidden {
+        opacity: 0;
+        width: 0;
+        transition:
+            opacity 0.4s ease-out,
+            width 0s 0.4s;
+    }
+}

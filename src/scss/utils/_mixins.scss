@@ -1,0 +1,43 @@
+@mixin border($r, $border) {
+    border-radius: $r;
+    border: $border;
+}
+@mixin transition($duration) {
+    transition: all ease-in-out;
+    transition-duration: $duration;
+}
+
+@mixin list($list-type) {
+    list-style: $list-type;
+}
+@mixin flexBox() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin link($color) {
+    color: $color;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+@mixin h-w($height, $width) {
+    height: $height;
+    width: $width;
+}
+@mixin user-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin scroll($bg, $color, $width, $border) {
+    ::-webkit-scrollbar {
+        background-color: $color;
+        width: $width;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $bg;
+        border-radius: $border;
+    }
+}
